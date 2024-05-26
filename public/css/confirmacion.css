@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  #imagenlogo {
+    position: absolute; /* Make the image absolutely positioned */
+    margin: 20px;
+    width: 120px; /* Set image width to 200 pixels */
+    height: 30px; /* Set image height to 100 pixels */
+   
+    z-index: 1; /* Ensure the image is above other elements */
+  }
+  
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh; /* 100% de la altura del dispositivo (viewport) */
+      background-image: url("../images/pngfondo.png"); /* Ruta a la imagen de fondo */
+      background-repeat: no-repeat;
+      background-position: bottom; /* Posicionar imagen en la derecha y centrada verticalmente */
+      background-size: 100%;
+  }
+  
+  .content-area {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0); /* Color de fondo opcional (transparente) */
+  }
+  
+  h1 {
+      text-align: center;
+      margin: 20px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 15px;
+  }
+  
+  .button-grid {
+      grid-row:auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns for buttons */
+      grid-gap: 10px; /* Space between buttons */
+      align-items: start; /* Center buttons vertically */
+    }
+
+    
+    button {
+      background-color: #85c44c;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 20px 20px; /* Ajustar relleno para acomodar el contenido si es necesario */
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 180px; /* Ancho fijo para ambos botones */
+    }
+
+    button:hover {
+      background-color: #70964f; /* Color de fondo al pasar el cursor */
+    }
+  
+    .paswor{
+      grid-column: span 2;
+    }
+  
+    form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+  }
+  
+
+  /*Tamaño de los inputs correo y contraseña */
+  form {
+      margin: 10px auto 0 auto;
+   
+      padding: 0px 10px 0px 0px;
+  }
+  
+  /*Cantidad de separación entre los inputs */
+  form input {
+      width: 100%;
+      outline: none;
+      border: 1px solid black;
+      margin: 10px 0;
+      padding: 10px 10px 10px 5px;
+  }
+  
+  
+  /*Remove Default Form Styling*/
+  button,
+  input,
+  select,
+  textarea {
+      font-family: inherit;
+      font-size: 100%;
+  }
+  
+  .form-message {
+      margin: 20px auto 20px auto;
+      border-radius: 10px;
+      max-width: 560px;
+      width: 25rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      p {
+          text-align: center;
+          font-size: 1.6rem;
+      }
+  }
+  
+  .form-message-red {
+      background-color: #ffb3b3;
+      border: 2px solid #ff0000;
+  }
+  
+  .form-message-green {
+      background-color: lightgreen;
+      border: 2px solid green;
+  }
+
+  @media (max-width: 768px) {
+  
+    /* Ocultar estilos de escritorio y tableta */
+    .desktop {
+      display: none;
+    }
+    .tablet {
+      display: none;
+    }
+  
+    /* Ajustar ancho del área de contenido para móviles */
+    .content-area {
+      width: 70%; /* Aumentar ancho para llenar la mayor parte de la pantalla */
+    }
+  
+    /* Ajustar tamaño de fuente de títulos para mejor lectura */
+    h1 {
+      color: rgb(0, 0, 0);
+      font-size: 2rem; /* Aumentar tamaño de fuente */
+      margin-bottom: 30px; /* Ajustar espacio según sea necesario */
+    }
+  
+  button,
+  .correo-select,
+  input,
+  select,
+  textarea {
+      font-family: inherit;
+      font-size: 0.8rem;
+  }
+  
+  
+    /* Ajustar estilos de botones para mejor comportamiento en móviles */
+  
+  
+    /* Ajustar estilos de inputs para hacerlos más largos en móviles */
+    input[type="text"],
+    input[type="password"] {
+      width: 100%; /* Aumentar el ancho al 100% del contenedor padre */
+      max-width: none; /* Eliminar cualquier ancho máximo existente */
+    }
+  
+    /* Cambiar la disposición de los botones para que se apilen verticalmente */
+    .button-grid {
+      display: flex;
+      flex-direction: column; /* Apilar botones verticalmente */
+      align-items: center; /* Centrar botones horizontalmente */
+    }
+  
+  }

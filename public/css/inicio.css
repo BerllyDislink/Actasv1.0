@@ -1,0 +1,196 @@
+/* Estilos generales de la página (body) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh; /* 100% de la altura del dispositivo (viewport) */
+
+  background-image: url("../images/v363_6.png"); /* Ruta a la imagen de fondo */
+  background-repeat: no-repeat;
+  background-position: right center; /* Posicionar imagen en la derecha y centrada verticalmente */
+  background-size: 50%; /* Tamaño de la imagen por defecto al 50% del ancho del contenedor */
+}
+
+
+#imagenlogo {
+  position: absolute; /* Make the image absolutely positioned */
+  margin: 20px;
+  width: 120px; /* Set image width to 200 pixels */
+  height: 30px; /* Set image height to 100 pixels */
+ 
+  z-index: 1; /* Ensure the image is above other elements */
+}
+
+/* Estilos del contenedor (.container) */
+.container {
+  text-align: left; /* Alinear texto a la izquierda dentro del contenedor */
+}
+
+/* Estilos del área de contenido (.content-area) */
+.content-area {
+  position: absolute; /* Posicionar de forma absoluta en relación a su padre (`body`) */
+  top: 30%; /* Ajustar posición vertical según sea necesario */
+  left: 10%; /* Ajustar posición horizontal según sea necesario */
+  width: 60%; /* Ajustar ancho según sea necesario */
+  height: 60%; /* Ajustar alto según sea necesario */
+  background-color: rgba(255, 255, 255, 0); /* Color de fondo opcional (transparente) */
+}
+
+/* Estilos de los títulos (h1 y h2) */
+h1 {
+  color: #717171;
+  font-size: 1rem; /* Ajustar tamaño de fuente según sea necesario */
+  margin-bottom: 50px; /* Espacio entre título y botones */
+}
+
+h2 {
+  color: black;
+  font-size: 3.5rem; /* Ajustar tamaño de fuente según sea necesario */
+  margin-bottom: 20px; /* Espacio entre título y botones */
+}
+
+/* Estilos de la cuadrícula de botones (.button-grid) */
+.button-grid {
+  display: flex;
+  justify-content: left; /* Alinear botones a la izquierda */
+  gap: 20px; /* Espacio entre botones */
+}
+
+/* Estilos de los botones (button) */
+button {
+  background-color: #85c44c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 20px; /* Ajustar relleno para acomodar el contenido si es necesario */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 180px; /* Ancho fijo para ambos botones */
+}
+
+.continuar-button {
+  background-color: #85c44c;
+  color: white;
+}
+
+button:hover {
+  background-color: #70964f; /* Color de fondo al pasar el cursor */
+}
+
+
+
+/* Estilos responsivos (media queries) */
+
+/* Para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+
+  /* Ocultar estilos de escritorio y tableta */
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+
+
+  /* Ajustar ancho del área de contenido para móviles */
+  .content-area {
+    width: 70%; /* Aumentar ancho para llenar la mayor parte de la pantalla */
+  }
+
+  /* Ajustar tamaño de fuente de títulos para mejor lectura */
+  h1{
+  color: white;
+  font-size: 0.8rem; /* Aumentar tamaño de fuente */
+  margin-bottom: 30px; /* Ajustar espacio según sea necesario */
+  }
+
+  h2 {
+    color: white;
+    font-size: 2rem; /* Aumentar tamaño de fuente */
+    margin-bottom: 15px; /* Ajustar espacio según sea necesario */
+  }
+
+  /* Ajustar estilos de botones para mejor comportamiento en móviles */
+  button,
+  input,
+  select,
+  textarea {
+      font-family: inherit;
+      font-size: 0.8rem;
+  }
+  
+  
+    /* Ajustar estilos de botones para mejor comportamiento en móviles */
+    button {
+      font-size: 0.8rem;
+      width: 80%; /* Aumentar el ancho al 80% del contenedor padre */
+      min-width: 150px; /* Asegurar un ancho máximo razonable */
+   
+    }
+  
+    /* Ajustar estilos de inputs para hacerlos más largos en móviles */
+    input[type="text"],
+    input[type="password"] {
+      width: 100%; /* Aumentar el ancho al 100% del contenedor padre */
+      max-width: none; /* Eliminar cualquier ancho máximo existente */
+    }
+
+  body{
+  background-image: url("../images/v363_6oscurecido.png"); /* Ruta a la imagen de fondo */
+  background-repeat: no-repeat;
+  background-position: center; /* Posicionar imagen en la derecha y centrada verticalmente */
+  background-size: cover;
+  height: 100vh;
+  }
+}
+
+
+/* Para pantallas entre 768px y 990px (tabletas) */
+@media (min-width: 768px) and (max-width: 1180px) {
+  /* Ocultar estilos de escritorio */
+  .desktop {
+    display: none;
+  }
+  .phone {
+    display: none;
+  }
+
+  /* Ajustar ancho del área de contenido para móviles */
+  .content-area {
+    width: 70%; /* Aumentar ancho para llenar la mayor parte de la pantalla */
+  }
+
+  /* Ajustar tamaño de fuente de títulos para mejor lectura */
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem; /* Aumentar tamaño de fuente */
+    margin-bottom: 30px; /* Ajustar espacio según sea necesario */
+  }
+  h2 {
+    color: rgb(255, 255, 255);
+    font-size: 4rem; /* Aumentar tamaño de fuente */
+    margin-bottom: 30px; /* Ajustar espacio según sea necesario */
+  }
+
+
+  /* Ajustar estilos de botones para mejor comportamiento en móviles */
+  button {
+    font-size: 1rem;
+    width: 90%; /* Aumentar el ancho al 80% del contenedor padre */
+    min-width: 150px; /* Asegurar un ancho máximo razonable */
+
+  }
+
+  /* Cambiar la disposición de los botones para que se apilen verticalmente */
+
+  body {
+    background-image: url("../images/fondo2.jpg"); /* Ruta a la imagen de fondo para tabletas */
+    background-repeat: no-repeat;
+    background-position: center; /* Posicionar imagen en la derecha y centrada verticalmente */
+    background-size: cover; /* Tamaño de la imagen por defecto al 50% del ancho del contenedor */
+    height: 100vh;
+  }
+
+}
